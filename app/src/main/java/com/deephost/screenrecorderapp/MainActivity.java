@@ -87,16 +87,12 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager notificationManager;
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
-
-
-
     static {
         cor.append(Surface.ROTATION_0, 90);
         cor.append(Surface.ROTATION_90, 0);
         cor.append(Surface.ROTATION_180, 270);
         cor.append(Surface.ROTATION_270, 180);
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -363,6 +359,7 @@ public class MainActivity extends AppCompatActivity {
         virtualDisplay = createVirtualDisplay();
         mediaRecorder.start();
     }
+    /* start home screen */
     public void startIntentMain() {
         Intent startMain = new Intent(Intent.ACTION_MAIN);
         startMain.addCategory(Intent.CATEGORY_HOME);
@@ -398,7 +395,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecorder() {
-
         dateStr();
         try {
             CamcorderProfile profile = CamcorderProfile.get(CamcorderProfile.QUALITY_HIGH);
